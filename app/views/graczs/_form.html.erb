@@ -1,0 +1,37 @@
+<%= form_with(model: gracz, local: true) do |form| %>
+  <% if gracz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gracz.errors.count, "error") %> prohibited this gracz from being saved:</h2>
+
+      <ul>
+      <% gracz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :imie %>
+    <%= form.text_field :imie, id: :gracz_imie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nazwisko %>
+    <%= form.text_field :nazwisko, id: :gracz_nazwisko %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nick %>
+    <%= form.text_field :nick, id: :gracz_nick %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Team_id %>
+    <%= form.collection_select :team_id, Team.order(:name), :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

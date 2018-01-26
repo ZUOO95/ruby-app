@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Skrót:</strong>
+  <%= @team.skrot %>
+</p>
+
+<p>
+  <strong>Pochodzenie:</strong>
+  <%= @team.pochodzenie %>
+</p>
+
+<p>
+  <strong>Sponsorzy:</strong>
+  <%= @team.sponsorzy %>
+</p>
+
+<%= link_to 'Edytuj', edit_team_path(@team), class:'btn btn-warning' %> |
+<%= link_to 'Cofnij', teams_path, class:'btn btn-success' %>
