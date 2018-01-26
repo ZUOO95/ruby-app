@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20180126011829) do
 
-  create_table "clubs", force: :cascade do |t|
-    t.string "name"
-    t.string "league"
-    t.integer "place"
-    t.integer "budget"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "graczs", force: :cascade do |t|
     t.string "imie"
@@ -39,15 +31,6 @@ ActiveRecord::Schema.define(version: 20180126011829) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "players", force: :cascade do |t|
-    t.string "name"
-    t.string "lastname"
-    t.integer "goals"
-    t.string "worth"
-    t.integer "club_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
@@ -58,11 +41,5 @@ ActiveRecord::Schema.define(version: 20180126011829) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

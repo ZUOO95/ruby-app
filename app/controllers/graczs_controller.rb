@@ -28,7 +28,7 @@ class GraczsController < ApplicationController
 
     respond_to do |format|
       if @gracz.save
-        format.html { redirect_to @gracz, notice: 'Gracz was successfully created.' }
+        format.html { redirect_to @gracz, notice: 'Gracz został dodany prawidłowo.' }
         format.json { render :show, status: :created, location: @gracz }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GraczsController < ApplicationController
   def update
     respond_to do |format|
       if @gracz.update(gracz_params)
-        format.html { redirect_to @gracz, notice: 'Gracz was successfully updated.' }
+        format.html { redirect_to @gracz, notice: 'Gracz został zaktualizowany prawidłowo.' }
         format.json { render :show, status: :ok, location: @gracz }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class GraczsController < ApplicationController
   def destroy
     @gracz.destroy
     respond_to do |format|
-      format.html { redirect_to graczs_url, notice: 'Gracz was successfully destroyed.' }
+      format.html { redirect_to graczs_url, notice: 'Gracz został usunięty prawidłowo.' }
       format.json { head :no_content }
     end
   end
